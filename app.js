@@ -90,7 +90,7 @@ function filterTodo(e) {
 function saveLocalTodos(todo){
     //CHECK -- HEY, do I already have things in there?
     let todos;
-    if(localStorage.getItem("todos") === undefined){
+    if(localStorage.getItem("todos") == undefined || localStorage.getItem("todos") == null){
         todos = [];
     }else{
         todos = JSON.parse(localStorage.getItem("todos"));
@@ -102,7 +102,7 @@ function saveLocalTodos(todo){
 function getTodos(){
     //CHECK -- HEY, do I already have things in there?
     let todos;
-    if(localStorage.getItem("todos") === undefined){
+    if(localStorage.getItem("todos") == undefined || localStorage.getItem("todos") == null){
         todos = [];
     }else{
         todos = JSON.parse(localStorage.getItem("todos"));
